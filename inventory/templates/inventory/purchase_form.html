@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>New purchase</title>
+{% endblock %}
+
+{% block content %}
+
+<h2>Add a new purchase</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    <select name="menuitem">
+        <option value selected>-----</option>
+        {% for menu_item in menu_items %}
+        <option value="{{menu_item.id}}">{{menu_item.name}}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Save">
+</form>
+
+
+{% endblock %}

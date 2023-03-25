@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Purchases</title>
+{% endblock %}
+
+{% block content %}
+<h2>Here are the purchases that have been made:</h2>
+<br>
+<table>
+    <tr>
+        <th>Purchase</th>
+        <th>Time and Date of Purchase</th>
+    </tr>
+    {% for purchase in purchases %}
+    <tr>
+        <td>{{purchase.menu_item.name}}</td>
+        <td>{{purchase.timestamp}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<table>
+    <tr>
+        <th scope="row">Total Costs</th>
+        <td>£{{cost}}</td>
+    </tr>
+    <tr>
+        <th scope="row">Total Revenue</th>
+        <td>£{{revenue}}</td>
+    </tr>
+    <tr>
+        <th scope="row">Profit</th>
+        <td>£{{profit}}</td>
+    </tr>
+</table>
+
+{% endblock %}
+

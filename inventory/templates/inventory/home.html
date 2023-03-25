@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block content %}
+<h2>Welcome to your inventory app {{user.username|title}}</h2>
+<div id="options">
+    <h3>What would you like to view</h3>
+    <table>
+        <tr>
+          <td><a href="{% url 'inventory' %}">Ingredients inventory</a></td>
+        </tr>
+        <tr>
+          <td><a href="{% url 'inventory_create' %}">Add an inventory item</a></td>
+        </tr>
+        <tr>
+          <td><a href="{% url 'menu_items' %}">Menu items</a></td>
+        </tr>
+        <tr>
+          <td><a href="{% url 'view_purchases' %}">Purchases made</a></td>
+        </tr>
+        <tr>
+          <td><a href="{% url 'purchase_create' %}">Create a new purchase</a></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
+

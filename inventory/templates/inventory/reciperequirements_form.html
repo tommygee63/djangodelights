@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Create Recipe Requirements</title>
+{% endblock %}
+
+{% block content %}
+<h2>Add recipe requirements</h2>
+<h3>Input the details of the recipe requirements you would like to add</h3>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Save">
+</form>
+{% endblock %}

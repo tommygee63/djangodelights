@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Recipe Requirements</title>
+{% endblock %}
+
+{% block content %}
+
+<h2>{{object.name}}</h2>
+
+<h3>The ingredients needed for {{object.name}} are:</h3> 
+
+<table>
+    <tr>
+        <th>Ingredient</th>
+        <th>Amount Needed</th>
+    </tr>
+    {% for recipe_requirement in object.reciperequirements_set.all %}
+    <tr>
+        <td>{{recipe_requirement.ingredient.name}}</td>
+        <td>{{recipe_requirement.quantity}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
