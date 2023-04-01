@@ -5,3 +5,11 @@ body{
 h1{
     text-align:center;
 }
+
+img{
+    height: 100px
+}
+
+body{
+    padding: 15px
+}
