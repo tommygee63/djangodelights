@@ -7,7 +7,7 @@
 {% block content %}
 <h2>Here are the purchases that have been made:</h2>
 <br>
-<table>
+<table class="table">
     <tr>
         <th>Purchase</th>
         <th>Time and Date of Purchase</th>
@@ -15,7 +15,7 @@
     {% for purchase in purchases %}
     <tr>
         <td>{{purchase.menu_item.name}}</td>
-        <td>{{purchase.timestamp}}</td>
+        <td id="timestamp">{{purchase.timestamp}}</td>
     </tr>
     {% endfor %}
 </table>

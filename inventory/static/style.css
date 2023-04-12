@@ -1,15 +1,146 @@
+/*
+*{
+    border: 1px solid red;
+}
+*/
+
 body{
-    background-color:hsla(26, 72%, 85%, 0.685); 
+    background-color: lightcyan;
+    margin: 0;
 }
 
 h1{
-    text-align:center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    border: 1px solid lightblue;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+
+h3{
+    margin-left: 25px;
+}
+
+p{
+    margin-left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 200;
+}
+
+#intro{
+    margin-left: 30px;
 }
 
 img{
-    height: 100px
+    height: 100px;
+    padding: 2px;
+    margin: 5px;
+    position: absolute;
+    border: 1px solid lightblue;
 }
 
-body{
-    padding: 15px
+.nav-bar{   
+    background-color: lightblue;
+    border: 1px solid lightblue;
+}
+
+.nav-bar li{
+    display: inline-block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    padding: 15px;
+    background-color: lightskyblue;
+}
+
+.nav-bar li:hover{
+    background-color: azure;
+    color: blue;
+}
+
+#nav-list{
+    background-color: lightskyblue;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+table{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.table tr:nth-child(even){
+    background-color: lightskyblue;
+}
+
+th, td{
+    padding: 5px 2px;
+}
+
+th{
+    background-color: lightskyblue;
+}
+
+table #menu-item, table #ingredient{
+    text-align: left;
+    color: black;
+}
+
+table #menu-item a:visited{
+    color: black;
+}
+
+/*table #ingredient-link{
+    border: 1px solid black;
+    padding: 5px;
+    background-color: lightskyblue;
+}*/
+
+#button{
+    text-align: center;
+}
+
+#menu-item-links{
+    width: 30%;
+    margin: 0 auto;
+}
+
+#menu-item-links a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: lightskyblue;
+}
+
+#menu-item-links a:hover{
+    background-color: azure;
+}
+
+#timestamp{
+    text-align: right;
+}
+
+form{
+    margin: 0px auto;
+    width: fit-content;
+    font-size: large;
 }

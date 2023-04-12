@@ -6,25 +6,12 @@
 
 {% block content %}
 <h2>Welcome to your inventory app {{user.username|title}}</h2>
-<div id="options">
-    <h3>What would you like to view</h3>
-    <table>
-        <tr>
-          <td><a href="{% url 'inventory' %}">Ingredients inventory</a></td>
-        </tr>
-        <tr>
-          <td><a href="{% url 'inventory_create' %}">Add an inventory item</a></td>
-        </tr>
-        <tr>
-          <td><a href="{% url 'menu_items' %}">Menu items</a></td>
-        </tr>
-        <tr>
-          <td><a href="{% url 'view_purchases' %}">Purchases made</a></td>
-        </tr>
-        <tr>
-          <td><a href="{% url 'purchase_create' %}">Create a new purchase</a></td>
-        </tr>
-    </table>
+<div id="intro">
+  <p>From here you have access to your inventory management system.</p>
+  <p>You can see the current iventory and add new ingredients to the inventory.</p>
+  <p>You can view the items on the menu and their recipe requirements. Add new menu items and set thier requirements.</p>
+  <p>You can view and create new purchases and see a breakdown of the costs, revenue and profit.</p>
 </div>
+    
 {% endblock %}
 

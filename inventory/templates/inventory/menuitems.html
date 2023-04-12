@@ -10,14 +10,14 @@
 <p>Select an item to see it's ingredients</p>
 
 <div id="menu_items">
-    <table>
+    <table class="table">
       <tr>
         <th>Menu Item</th>
         <th>Price</th>
       </tr>
         {% for menu_item in object_list %}
           <tr>
-            <td><a href="{% url 'recipe_requirements' menu_item.id %}">{{menu_item.name}}</a></td>
+            <td id="menu-item"><a href="{% url 'recipe_requirements' menu_item.id %}">{{menu_item.name}}</a></td>
             <td>£{{menu_item.price}}</td>
           </tr>
         {% endfor %}
@@ -26,6 +26,8 @@
 <br>
 <br>
 
-<a href="{% url 'menu_item_create' %}">Add a menu item</a>
-<a href="{% url 'recipe_requirements_create' %}">Create recipe requirements</a>
+<div id="menu-item-links">
+  <a href="{% url 'menu_item_create' %}">Add a menu item</a>
+  <a href="{% url 'recipe_requirements_create' %}">Create recipe requirements</a>
+</div>
 {% endblock %}
